@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, ol{
+    list-style: none;
+}
+body{
+    overflow: hidden;
+}
+
+/* header */
+.header{
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 217, 0, 0.461);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+
+}
+/* 로고 */
+.header h1{}
+
+.header h1 a{
+    color: rgb(52, 52, 108);
+}
+
+/* 메뉴 */
+.header .menu{
+    display: flex;
+}
+
+.header .menu li{
+    margin: 0 1rem;
+}
+
+.header .menu li a{
+    color: rgb(63, 63, 103);
+}
+
+/* sns */
+.header .sns{
+    display: flex;
+}
+
+
+.header .sns li a{
+    margin: 0 0.5vw;
+    font-size: 18px;
+    color: #ddd;
+}
+
+.header .sns li a i{}
+
+.header .sub_menu {
+    position: absolute;
+    display: none;
+}
+
+/* main */
+
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+}
+
+main video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+main .text{
+    position: absolute;
+    left: 6vw;
+    top: 40%;
+}
+
+main .text p{
+    font-size: 4vw;
+    color: rgb(22, 22, 50);
+}
+
+main .text ul{
+    display: flex;
+}
+
+main .text ul li{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+main .text ul li a{
+    color: rgb(63, 63, 103);
+}
+
+main .text ul li a i{}
+
+main .text ul li a strong{}
+
+/* footer */
+footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    font: 14px/1 'arial';
+    color: #ddd;
+    text-align: center;
+    padding: 5vh 5vw;
+}
+
+@media screen and (max-width:768px) {
+    .header .sub_menu {
+        display: inline-block;
+        position: absolute;
+        right: 1rem;
+    }
+    .header .sub_menu a{
+        color: aquamarine;
+    }
+    
+    .header .sns{
+        display: none;
+    }
+    .header .menu{
+        display: none;
+    }
+    .header {
+        justify-content: center;
+    }
+    main .text ul{
+        flex-direction: column;
+    }
+}
